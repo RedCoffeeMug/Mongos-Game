@@ -1,6 +1,6 @@
 extends Control
 
-
+onready var popup = get_node("OptionsMenu")
 
 
 func _ready():
@@ -20,7 +20,7 @@ func _on_ContinueButton_pressed():
 
 
 func _on_OptionsButton_pressed():
-	pass # Replace with function body.
+	popup.visible = true
 
 
 

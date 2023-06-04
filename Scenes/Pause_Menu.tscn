@@ -34,6 +34,17 @@ margin_right = 638.0
 margin_bottom = 421.0
 text = "Main Menu"
 
+[node name="OptionsMenu" type="WindowDialog" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -314.0
+margin_top = -209.0
+margin_right = 314.0
+margin_bottom = 209.0
+window_title = "Options"
+
 [connection signal="pressed" from="ContinueButton" to="." method="_on_ContinueButton_pressed"]
 [connection signal="pressed" from="OptionsButton" to="." method="_on_OptionsButton_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]
