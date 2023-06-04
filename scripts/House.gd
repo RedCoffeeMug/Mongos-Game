@@ -16,13 +16,10 @@ func _on_Mongo_pats_changed():
 	pats.text = "Pats: " + str(global.pats)
 
 
-#ADD COOLDOWN
-func _on_Hug_Button_pressed():
+func _on_Travel_Button_pressed():
+	SceneTransition.change_scene("res://Scenes/Shop.tscn")
+
+
+func _on_HugMongo_Button_pressed():
 	global.coins += 2
 	coins.text = "Coins: " + str(global.coins)
-
-
-
-
-func _on_Shop_Button_pressed():
-	get_tree().change_scene("res://Scenes/Shop.tscn")

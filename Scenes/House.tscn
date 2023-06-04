@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scripts/Mongo.gd" type="Script" id=1]
 [ext_resource path="res://scripts/House.gd" type="Script" id=2]
 [ext_resource path="res://icon.png" type="Texture" id=3]
 [ext_resource path="res://assets/House-empty.png" type="Texture" id=4]
 [ext_resource path="res://Scenes/Pause_Menu.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/Button_normal.png" type="Texture" id=6]
 
 [node name="House" type="Node2D"]
 script = ExtResource( 2 )
@@ -39,23 +40,41 @@ text = "Pats: 0"
 align = 1
 valign = 1
 
-[node name="Hug_Button" type="Button" parent="."]
-margin_left = 270.0
-margin_top = 554.0
-margin_right = 368.0
-margin_bottom = 592.0
-text = "Hug Mongo"
-
-[node name="Shop_Button" type="Button" parent="."]
+[node name="Travel_Button" type="TextureButton" parent="."]
 margin_left = 721.0
 margin_top = 7.0
 margin_right = 864.0
-margin_bottom = 45.0
-text = "Travel to Tofu's shop"
+margin_bottom = 47.0
+texture_normal = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="Travel_Button"]
+modulate = Color( 0, 0, 0, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Travel to Tofu's Shop"
+align = 1
+valign = 1
+
+[node name="HugMongo_Button" type="TextureButton" parent="."]
+margin_left = 270.0
+margin_top = 554.0
+margin_right = 413.0
+margin_bottom = 594.0
+texture_normal = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="HugMongo_Button"]
+modulate = Color( 0, 0, 0, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Hug Mongo"
+align = 1
+valign = 1
 
 [node name="PauseMenu" parent="." instance=ExtResource( 5 )]
 visible = false
 
 [connection signal="pats_changed" from="Mongo" to="." method="_on_Mongo_pats_changed"]
-[connection signal="pressed" from="Hug_Button" to="." method="_on_Hug_Button_pressed"]
-[connection signal="pressed" from="Shop_Button" to="." method="_on_Shop_Button_pressed"]
+[connection signal="pressed" from="Travel_Button" to="." method="_on_Travel_Button_pressed"]
+[connection signal="pressed" from="HugMongo_Button" to="." method="_on_HugMongo_Button_pressed"]

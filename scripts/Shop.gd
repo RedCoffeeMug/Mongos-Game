@@ -8,5 +8,6 @@ func _ready():
 	coins.text = "Coins: " + str(global.coins)
 	pats.text = "Pats: " + str(global.pats)
 
-func _on_House_Button_pressed():
-	get_tree().change_scene("res://Scenes/House.tscn")
+
+func _on_MongoHouse_Button_pressed():
+	SceneTransition.change_scene("res://Scenes/House.tscn")

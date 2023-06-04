@@ -23,8 +23,7 @@ func _on_OptionsButton_pressed():
 	popup.visible = true
 
 
-
-
-func _on_QuitButton_pressed():
+func _on_MenuButton_pressed():
 	visible = false
-	get_tree().change_scene("res://Scenes/Menu.tscn")
+	SceneTransition.change_scene("res://Scenes/Menu.tscn")
+
