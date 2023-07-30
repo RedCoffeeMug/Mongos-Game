@@ -13,3 +13,8 @@ func _on_OptionsButton_pressed():
 
 func _on_QuitButton_pressed():
 	get_tree().quit()
+
+
+func _process(delta):
+	if $BackgroundMusic.playing == false:
+		$BackgroundMusic.play()

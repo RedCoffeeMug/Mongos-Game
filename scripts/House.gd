@@ -7,6 +7,8 @@ onready var pats = $Pats
 func _ready():
 	coins.text = "Coins: " + str(global.coins)
 	pats.text = "Pats: " + str(global.pats)
+	var daycycle = get_tree().get_root().find_node("DayTimer", true, false)
+	daycycle.connect("time_changed",self, "handle_time_change")
 
 
 func _on_Mongo_pats_changed():
@@ -23,3 +25,16 @@ func _on_Travel_Button_pressed():
 func _on_HugMongo_Button_pressed():
 	global.coins += 2
 	coins.text = "Coins: " + str(global.coins)
+
+
+func handle_time_change():
+	if DayTimer.day == false:
+		print("night")
+	else:
+		print("day")
+
+
+func _process(delta):
+	
+	if $BackgroundMusic.playing == false:
+		$BackgroundMusic.play()

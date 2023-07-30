@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Mongo_MainMenu.wav-1159d0f775d64c5d64058465323b5712.sample"
+
+[deps]
+
+source_file="res://Audio/Mongo_MainMenu.wav"
+dest_files=[ "res://.import/Mongo_MainMenu.wav-1159d0f775d64c5d64058465323b5712.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
