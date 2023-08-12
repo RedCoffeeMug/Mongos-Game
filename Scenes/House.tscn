@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scripts/Mongo.gd" type="Script" id=1]
 [ext_resource path="res://scripts/House.gd" type="Script" id=2]
-[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://assets/Mongo_Sprite1.png" type="Texture" id=3]
 [ext_resource path="res://assets/House-empty.png" type="Texture" id=4]
 [ext_resource path="res://Scenes/Pause_Menu.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/Button_normal.png" type="Texture" id=6]
@@ -19,7 +19,8 @@ margin_bottom = 600.0
 texture = ExtResource( 4 )
 
 [node name="Mongo" type="Sprite" parent="."]
-position = Vector2( 517, 517 )
+position = Vector2( 505, 468 )
+scale = Vector2( 0.792969, 0.792969 )
 texture = ExtResource( 3 )
 script = ExtResource( 1 )
 

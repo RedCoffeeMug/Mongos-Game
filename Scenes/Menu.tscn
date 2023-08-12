@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/Menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/House_Blur.png" type="Texture" id=2]
 [ext_resource path="res://assets/MenuButton_Normal.png" type="Texture" id=3]
-[ext_resource path="res://assets/Options_Menu.png" type="Texture" id=4]
 [ext_resource path="res://Audio/Mongo_MainMenu.wav" type="AudioStream" id=5]
 
 [node name="Menu" type="Control"]
@@ -31,7 +30,7 @@ margin_right = 128.5
 margin_bottom = -33.0
 texture_normal = ExtResource( 3 )
 
-[node name="Label" type="Label" parent="StartButton"]
+[node name="StartLabel" type="Label" parent="StartButton"]
 modulate = Color( 0, 0, 0, 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -50,7 +49,7 @@ margin_right = 128.5
 margin_bottom = 20.0
 texture_normal = ExtResource( 3 )
 
-[node name="Label" type="Label" parent="OptionsButton"]
+[node name="OptionLabel" type="Label" parent="OptionsButton"]
 modulate = Color( 0, 0, 0, 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -69,7 +68,7 @@ margin_right = 128.5
 margin_bottom = 75.0
 texture_normal = ExtResource( 3 )
 
-[node name="Label" type="Label" parent="QuitButton"]
+[node name="QuitLabel" type="Label" parent="QuitButton"]
 modulate = Color( 0, 0, 0, 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -77,33 +76,37 @@ text = "Quit Game"
 align = 1
 valign = 1
 
-[node name="Title" type="Label" parent="."]
-modulate = Color( 0, 0, 0, 1 )
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -177.0
-margin_bottom = 66.0
+[node name="CreditsButton" type="Button" parent="."]
+margin_left = 894.0
+margin_top = 555.0
+margin_right = 990.0
+margin_bottom = 589.0
+text = "Credits"
+
+[node name="Title" type="RichTextLabel" parent="."]
+margin_left = 394.0
+margin_top = 3.0
+margin_right = 497.0
+margin_bottom = 21.0
 rect_scale = Vector2( 2, 2 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "[center]Mongo's Game"
 text = "Mongo's Game"
-align = 1
-valign = 1
 
-[node name="OptionsMenu" type="WindowDialog" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -314.0
-margin_top = -209.0
-margin_right = 314.0
-margin_bottom = 209.0
-window_title = "Options"
+[node name="CreditsPanel" type="Panel" parent="."]
+visible = false
+margin_left = 217.0
+margin_top = 30.0
+margin_right = 773.0
+margin_bottom = 578.0
 
-[node name="TextureRect" type="TextureRect" parent="OptionsMenu"]
+[node name="credits_label" type="RichTextLabel" parent="CreditsPanel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = ExtResource( 4 )
+bbcode_enabled = true
 
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="OptionsButton" to="." method="_on_OptionsButton_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]
+[connection signal="pressed" from="CreditsButton" to="." method="_on_CreditsButton_pressed"]
