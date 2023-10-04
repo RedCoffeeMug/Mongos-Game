@@ -9,7 +9,7 @@ func _ready():
 
 
 func _input(event):
-	if Input.is_action_pressed("Game_Paused"):
+	if Input.is_action_just_released("Game_Paused"):
 		visible = not visible
 
 
@@ -20,7 +20,7 @@ func _on_ContinueButton_pressed():
 
 
 func _on_OptionsButton_pressed():
-	popup.visible = true
+	pass
 
 
 func _on_MenuButton_pressed():

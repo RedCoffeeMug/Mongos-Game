@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Mongo_Sprite1.png-dee02d5b8bc9e9078413fa8ab44ba6c2.stex"
+path="res://.import/Mongo-idle1.png-471e18a3fd88045355e14418cdc47859.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Mongo_Sprite1.png"
-dest_files=[ "res://.import/Mongo_Sprite1.png-dee02d5b8bc9e9078413fa8ab44ba6c2.stex" ]
+source_file="res://assets/Mongo-idle1.png"
+dest_files=[ "res://.import/Mongo-idle1.png-471e18a3fd88045355e14418cdc47859.stex" ]
 
 [params]
 

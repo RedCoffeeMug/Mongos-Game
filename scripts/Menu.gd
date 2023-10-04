@@ -8,7 +8,8 @@ func _ready():
 	var copyright_text = ""
 	
 	copyright_text += "Made by [url=https://github.com/RedCoffeeMug]RedCoffeeMug[/url]\n"
-	copyright_text += "Created using the [url=https://godotengine.org/license/]Godot Game Engine[/url]"
+	copyright_text += "Created using the [url=https://godotengine.org/license/]Godot Game Engine[/url]\n"
+	copyright_text += "Using [url=https://fonts.google.com/specimen/Caprasimo/about]Caprasimo Regular Font[/url]"
 	
 	#license
 	var copyright_info = Engine.get_copyright_info()
@@ -51,3 +52,7 @@ func _on_CreditsButton_pressed():
 		CreditsPanel.show()
 	else:
 		CreditsPanel.hide()
+
+
+func _on_credits_label_meta_clicked(meta):
+	OS.shell_open(meta)

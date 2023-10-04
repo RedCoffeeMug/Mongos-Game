@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/House_Blur.png-1e3931d159782acb99870050c7be5df5.stex"
+path="res://.import/House-night.png-2bd51c7eac55a8f36e95369149c5e9c1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/House_Blur.png"
-dest_files=[ "res://.import/House_Blur.png-1e3931d159782acb99870050c7be5df5.stex" ]
+source_file="res://assets/House-night.png"
+dest_files=[ "res://.import/House-night.png-2bd51c7eac55a8f36e95369149c5e9c1.stex" ]
 
 [params]
 

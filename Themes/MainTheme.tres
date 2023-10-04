@@ -1,0 +1,64 @@
+[gd_resource type="Theme" load_steps=14 format=2]
+
+[ext_resource path="res://Themes/Caprasimo-Regular.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.550781, 0.428067, 0.219452, 0.905882 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.65625, 0.533773, 0.325562, 1 )
+
+[sub_resource type="Gradient" id=4]
+offsets = PoolRealArray( 0, 0.335196, 0.994413, 1 )
+colors = PoolColorArray( 0.572549, 0.454902, 0.254902, 1, 0.602261, 0.490768, 0.294441, 1, 0.734815, 0.650776, 0.470831, 1, 0.769531, 0.692683, 0.517029, 1 )
+
+[sub_resource type="GradientTexture2D" id=5]
+gradient = SubResource( 4 )
+fill_from = Vector2( 0.654167, 0.3625 )
+fill_to = Vector2( 1, 1 )
+
+[sub_resource type="StyleBoxTexture" id=6]
+texture = SubResource( 5 )
+region_rect = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.572549, 0.454902, 0.254902, 1 )
+border_color = Color( 0.882353, 0.8, 0.611765, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.460938, 0.36891, 0.212463, 1 )
+border_color = Color( 0.882353, 0.8, 0.611765, 1 )
+
+[sub_resource type="DynamicFont" id=9]
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.847656, 0.726747, 0.440384, 1 )
+
+[sub_resource type="DynamicFont" id=10]
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=12]
+border_width_left = 5
+border_width_right = 5
+border_color = Color( 0.554688, 0.402355, 0.0541687, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[resource]
+Button/colors/font_color_disabled = Color( 0, 0, 0, 0.360784 )
+Button/fonts/font = SubResource( 1 )
+Button/styles/disabled = SubResource( 7 )
+Button/styles/focus = SubResource( 8 )
+Button/styles/hover = SubResource( 6 )
+Button/styles/normal = SubResource( 2 )
+Button/styles/pressed = SubResource( 3 )
+Label/fonts/font = SubResource( 9 )
+Panel/styles/panel = SubResource( 11 )
+RichTextLabel/fonts/normal_font = SubResource( 10 )
+VScrollBar/styles/scroll = SubResource( 12 )
