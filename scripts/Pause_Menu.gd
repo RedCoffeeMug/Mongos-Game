@@ -1,6 +1,5 @@
 extends Control
 
-onready var popup = get_node("OptionsMenu")
 
 
 func _ready():
@@ -8,7 +7,7 @@ func _ready():
 
 
 
-func _input(event):
+func _input(_event):
 	if Input.is_action_just_released("Game_Paused"):
 		visible = not visible
 

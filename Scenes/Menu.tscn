@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scripts/Menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/House-blur.png" type="Texture" id=2]
@@ -8,6 +8,15 @@
 
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.913725, 0.827451, 0.752941, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.937255, 0.862745, 0.8, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.913725, 0.827451, 0.752941, 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.937255, 0.862745, 0.8, 1 )
 
 [sub_resource type="DynamicFont" id=1]
 size = 64
@@ -33,11 +42,13 @@ margin_left = 384.0
 margin_top = 232.0
 margin_right = 641.0
 margin_bottom = 272.0
+focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+enabled_focus_mode = 0
 text = "Start"
 
 [node name="OptionsButton" type="Button" parent="."]
@@ -45,12 +56,14 @@ margin_left = 384.0
 margin_top = 285.0
 margin_right = 641.0
 margin_bottom = 325.0
+focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
 custom_styles/normal = SubResource( 3 )
+enabled_focus_mode = 0
 text = "Options"
 
 [node name="QuitButton" type="Button" parent="."]
@@ -58,23 +71,34 @@ margin_left = 384.0
 margin_top = 338.0
 margin_right = 641.0
 margin_bottom = 378.0
+focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+enabled_focus_mode = 0
 text = "Quit"
 
 [node name="CreditsButton" type="Button" parent="."]
-margin_left = 876.0
-margin_top = 548.0
-margin_right = 995.0
-margin_bottom = 590.0
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -134.0
+margin_top = -57.0
+margin_right = -15.0
+margin_bottom = -15.0
+focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+enabled_focus_mode = 0
 text = "Credits"
 
 [node name="Title" type="RichTextLabel" parent="."]
