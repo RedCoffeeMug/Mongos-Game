@@ -9,7 +9,9 @@ func _ready():
 	
 	copyright_text += "Made by [url=https://github.com/RedCoffeeMug]RedCoffeeMug[/url]\n"
 	copyright_text += "Created using the [url=https://godotengine.org/license/]Godot Game Engine[/url]\n"
-	copyright_text += "Using [url=https://fonts.google.com/specimen/Caprasimo/about]Caprasimo Regular Font[/url]"
+	copyright_text += "Using [url=https://fonts.google.com/specimen/Caprasimo/about]Caprasimo Regular Font[/url]\n"
+	copyright_text += "Special Thanks to:   SmallMathGuy, Mongo haver.   Maki. \n"
+	copyright_text += "Tigris, for their support."
 	
 	#license
 	var copyright_info = Engine.get_copyright_info()
