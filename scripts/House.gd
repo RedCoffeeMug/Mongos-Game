@@ -13,6 +13,8 @@ func _ready():
 	$HugMongo_Button.disabled = false
 	$InputArea.visible = false
 	$MongoSpeaks.visible = false
+	Talkmongo.disabled = true
+	Hugmongo.disabled = true
 
 
 func _on_Mongo_pats_changed():
@@ -50,16 +52,6 @@ func _on_TalkMongo_pressed():
 		$InputArea.visible = false
 
 
-func _on_ShowButtons_pressed():
-	if Hugmongo.visible == false:
-		Hugmongo.visible = true
-	else:
-		Hugmongo.visible = false
-	if Talkmongo.visible == false:
-		Talkmongo.visible = true
-	else:
-		Talkmongo.visible = false
-
 
 func _on_Input_text_entered(new_text):
 	$MongoSpeaks.visible = true
@@ -69,3 +61,22 @@ func _on_Input_text_entered(new_text):
 
 func _on_Timer_timeout():
 	$MongoSpeaks.visible = false
+
+
+func _on_CostCheck_timeout():
+	if global.pats >= 20:
+		Hugmongo.disabled = false
+		$HugMongo_Button/RichTextLabel.visible = false
+		$HugMongo_Button/CostCheck.stop()
+	else:
+		$HugMongo_Button/RichTextLabel.visible = true
+
+
+
+func _on_TalkCostCheck_timeout():
+	if global.pats >= 50:
+		Talkmongo.disabled = false
+		$TalkMongo/RichTextLabel.visible = false
+		$TalkMongo/TalkCostCheck.stop()
+	else:
+		$TalkMongo/RichTextLabel.visible = true
