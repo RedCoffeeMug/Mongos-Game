@@ -29,8 +29,10 @@ func _on_Travel_Button_pressed():
 
 
 func _on_HugMongo_Button_pressed():
-	global.coins += 4
+	global.coins += 5
+	global.pats += 1
 	Coins.text = "Coins: " + str(global.coins)
+	Pats.text = "Pats: " + str(global.pats)
 	$HugMongo_Button.disabled = true
 	Hugcooldown.start()
 
@@ -57,10 +59,15 @@ func _on_Input_text_entered(new_text):
 	$MongoSpeaks.visible = true
 	Mongospeech.text = "*Mongo looks at you, he doesn't understand. However he smiles and wishes you joy for the rest of the day*"
 	$MongoSpeaks/Timer.start()
+	$TalkMongo.disabled = true
 
 
 func _on_Timer_timeout():
 	$MongoSpeaks.visible = false
+	global.coins += 11
+	Coins.text = "Coins: " + str(global.coins)
+	$TalkMongo.disabled = false
+	$MongoSpeaks/Timer.stop()
 
 
 func _on_CostCheck_timeout():
@@ -80,3 +87,14 @@ func _on_TalkCostCheck_timeout():
 		$TalkMongo/TalkCostCheck.stop()
 	else:
 		$TalkMongo/RichTextLabel.visible = true
+
+
+
+
+func _on_EndGame_timeout(): #remove after beta
+	if global.coins >= 300:
+		endgame()
+		$Coins/EndGame.stop()
+
+func endgame(): #remove after beta
+	SceneTransition.change_scene("res://Scenes/BetaEnd.tscn")

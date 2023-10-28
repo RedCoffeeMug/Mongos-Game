@@ -56,6 +56,10 @@ text = "Coins: 0"
 align = 1
 valign = 1
 
+[node name="EndGame" type="Timer" parent="Coins"]
+wait_time = 0.3
+autostart = true
+
 [node name="Pats" type="Label" parent="."]
 margin_left = 935.0
 margin_top = 53.0
@@ -98,7 +102,6 @@ enabled_focus_mode = 0
 text = "Hug Mongo"
 
 [node name="HugCooldown" type="Timer" parent="HugMongo_Button"]
-wait_time = 0.7
 
 [node name="RichTextLabel" type="RichTextLabel" parent="HugMongo_Button"]
 margin_left = 18.0
@@ -181,6 +184,7 @@ visible = false
 
 [connection signal="pats_changed" from="Mongo" to="." method="_on_Mongo_pats_changed"]
 [connection signal="timeout" from="Mongo/PatsCooldown" to="Mongo" method="_on_PatsCooldown_timeout"]
+[connection signal="timeout" from="Coins/EndGame" to="." method="_on_EndGame_timeout"]
 [connection signal="pressed" from="TalkMongo" to="." method="_on_TalkMongo_pressed"]
 [connection signal="timeout" from="TalkMongo/TalkCostCheck" to="." method="_on_TalkCostCheck_timeout"]
 [connection signal="pressed" from="HugMongo_Button" to="." method="_on_HugMongo_Button_pressed"]
