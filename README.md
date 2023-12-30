@@ -1,7 +1,10 @@
-# Mongos-Game
-Short and simple game being worked on. Part of an inside joke but still might be fun to play.
+# Mongos-Game beta
+Simple game I'm working on to both improve my coding skill and art skills. It isn't much at the moment but it is being worked on. \n
+Interact with a dog named Mongo
 
 #Gameplay
-- You sit in a house patting a dog to gain coins.
-- You can talk to mongo about your day and hug him
-I will provide more details once the beta is released.
+- Pat Mongo 
+- hug Mongo
+- Talk to Mongo about your day
+- Coins and Pats counter (Does nothing for now)
+- Temp "Ending"

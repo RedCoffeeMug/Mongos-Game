@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Mongo-Bark1.mp3-9119f64ecd997a193c487c9c2714ce52.mp3str"
+
+[deps]
+
+source_file="res://Audio/Mongo-Bark1.mp3"
+dest_files=[ "res://.import/Mongo-Bark1.mp3-9119f64ecd997a193c487c9c2714ce52.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
