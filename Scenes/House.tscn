@@ -1,9 +1,8 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scripts/Mongo.gd" type="Script" id=1]
 [ext_resource path="res://scripts/House.gd" type="Script" id=2]
 [ext_resource path="res://assets/Mongo-idle1.png" type="Texture" id=3]
-[ext_resource path="res://assets/House-day.png" type="Texture" id=4]
 [ext_resource path="res://Scenes/Pause_Menu.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/Mongo-coin.png" type="Texture" id=6]
 [ext_resource path="res://Themes/MainTheme.tres" type="Theme" id=7]
@@ -32,7 +31,6 @@ volume_db = -12.0
 [node name="Background" type="TextureRect" parent="."]
 margin_right = 1024.0
 margin_bottom = 600.0
-texture = ExtResource( 4 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -111,16 +109,16 @@ text = "Hug Mongo"
 
 [node name="HugCooldown" type="Timer" parent="HugMongo_Button"]
 
+[node name="CostCheck" type="Timer" parent="HugMongo_Button"]
+wait_time = 0.2
+autostart = true
+
 [node name="RichTextLabel" type="RichTextLabel" parent="HugMongo_Button"]
 margin_left = 18.0
 margin_top = -18.0
 margin_right = 80.0
 margin_bottom = 15.0
 text = "20 pats"
-
-[node name="CostCheck" type="Timer" parent="HugMongo_Button"]
-wait_time = 0.2
-autostart = true
 
 [node name="Travel_Button" type="TextureButton" parent="."]
 visible = false
