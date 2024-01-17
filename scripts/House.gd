@@ -95,11 +95,15 @@ func ReadyDayCheck():
 
 func _on_time_changed():
 	if DayTransition.Day == true:
-		pass
-		#Housebackground.texture = load("res://assets/House-day.png")
+		$DayTransition/AnimationPlayer.play("Day")
+		yield($DayTransition/AnimationPlayer, 'animation_finished')
+		Housebackground.texture = load("res://assets/House-day.png")
+		$DayTransition/AnimationPlayer.play_backwards("Day")
 	else:
-		pass
-		#Housebackground.texture = load("res://assets/House-night.png")
+		$DayTransition/AnimationPlayer.play("Night")
+		yield($DayTransition/AnimationPlayer, 'animation_finished')
+		Housebackground.texture = load("res://assets/House-night.png")
+		$DayTransition/AnimationPlayer.play_backwards("Night")
 
 
 

@@ -1,6 +1,7 @@
 extends Node
 
 var Day = true
+onready var Daytimer = $DayTimer
 signal time_changed
 
 
@@ -10,10 +11,10 @@ func _ready():
 
 
 func _on_CorrectScene_timeout():
-	if get_tree().current_scene.name == "House" and $DayTimer.is_stopped() == true:
-		$DayTimer.start()
+	if get_tree().current_scene.name == "House" and Daytimer.is_stopped() == true:
+		Daytimer.start()
 	elif get_tree().current_scene.name == "Menu":
-		$DayTimer.stop()
+		Daytimer.stop()
 
 
 func _on_DayTimer_timeout():
