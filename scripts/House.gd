@@ -31,8 +31,9 @@ func _on_Mongo_pats_changed():
 	Pats.text = "Pats: " + str(global.pats)
 
 func _on_TalkMongo_pressed():
-	if $InputArea.visible == false:
-		$InputArea.visible = true
+	if DayTransition.Day == true:
+		if $InputArea.visible == false:
+			$InputArea.visible = true
 	else:
 		$InputArea.visible = false
 
@@ -50,12 +51,13 @@ func _on_Timer_timeout():
 	$MongoSpeaks/Timer.stop()
 
 func _on_HugMongo_Button_pressed():
-	global.coins += 5
-	global.pats += 1
-	Coins.text = "Coins: " + str(global.coins)
-	Pats.text = "Pats: " + str(global.pats)
-	$HugMongo_Button.disabled = true
-	Hugcooldown.start()
+	if DayTransition.Day == true:
+		global.coins += 5
+		global.pats += 1
+		Coins.text = "Coins: " + str(global.coins)
+		Pats.text = "Pats: " + str(global.pats)
+		$HugMongo_Button.disabled = true
+		Hugcooldown.start()
 
 
 
