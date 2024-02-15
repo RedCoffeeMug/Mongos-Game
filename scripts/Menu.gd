@@ -9,13 +9,13 @@ func _ready():
 	
 	copyright_text += "Made by [url=https://github.com/RedCoffeeMug]RedCoffeeMug[/url]\n"
 	copyright_text += "Created using the [url=https://godotengine.org/license/]Godot Game Engine[/url]\n"
-	copyright_text += "Using [url=https://fonts.google.com/specimen/Caprasimo/about]Caprasimo Regular Font[/url]\n"
-	copyright_text += "Special Thanks to:   SmallMathGuy, Mongo haver.   Maki. \n"
-	copyright_text += "Tigris, for their support."
+	copyright_text += "Using [url=https://fonts.google.com/specimen/Caprasimo/about]Caprasimo Regular Font[/url]\n\n"
+	copyright_text += "Special Thanks to: \nSmallMathGuy (Mongo haver). Maki.\n"
+	copyright_text += "Tigris (for their support)."
 	
 	#license
 	var copyright_info = Engine.get_copyright_info()
-	copyright_text += "\n\n===THIRD-PARTY COMPONETS===\n"
+	copyright_text += "\n\n\n===THIRD-PARTY COMPONETS===\n"
 	for part in copyright_info:
 		copyright_text += part["name"] + " - " + part["parts"][0]["license"] + "\n"
 	

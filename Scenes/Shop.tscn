@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scripts/Shop.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Pause_Menu.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/Button_normal.png" type="Texture" id=3]
+[ext_resource path="res://Themes/MainTheme.tres" type="Theme" id=3]
 
 [node name="Shop" type="Node2D"]
 position = Vector2( 1, 0 )
@@ -13,6 +13,7 @@ margin_left = 937.0
 margin_top = 3.0
 margin_right = 1008.0
 margin_bottom = 39.0
+theme = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Coins: 0"
 align = 1
@@ -23,27 +24,11 @@ margin_left = 935.0
 margin_top = 53.0
 margin_right = 1006.0
 margin_bottom = 89.0
+theme = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Pats: 0"
 align = 1
 valign = 1
 
-[node name="MongoHouse_Button" type="TextureButton" parent="."]
-margin_left = 721.0
-margin_top = 7.0
-margin_right = 864.0
-margin_bottom = 47.0
-texture_normal = ExtResource( 3 )
-
-[node name="Label" type="Label" parent="MongoHouse_Button"]
-modulate = Color( 0, 0, 0, 1 )
-anchor_right = 1.0
-anchor_bottom = 1.0
-text = "Mongo's House"
-align = 1
-valign = 1
-
 [node name="PauseMenu" parent="." instance=ExtResource( 2 )]
 visible = false
-
-[connection signal="pressed" from="MongoHouse_Button" to="." method="_on_MongoHouse_Button_pressed"]

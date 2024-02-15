@@ -1,23 +1,10 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scripts/Menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/House-blur.png" type="Texture" id=2]
-[ext_resource path="res://assets/title.png" type="Texture" id=3]
 [ext_resource path="res://Themes/MainTheme.tres" type="Theme" id=4]
 [ext_resource path="res://Audio/Mongo_MainMenu.wav" type="AudioStream" id=5]
 [ext_resource path="res://Themes/Caprasimo-Regular.ttf" type="DynamicFontData" id=6]
-
-[sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0.913725, 0.827451, 0.752941, 1 )
-
-[sub_resource type="StyleBoxFlat" id=4]
-bg_color = Color( 0.937255, 0.862745, 0.8, 1 )
-
-[sub_resource type="StyleBoxFlat" id=5]
-bg_color = Color( 0.913725, 0.827451, 0.752941, 1 )
-
-[sub_resource type="StyleBoxFlat" id=6]
-bg_color = Color( 0.937255, 0.862745, 0.8, 1 )
 
 [sub_resource type="DynamicFont" id=1]
 size = 64
@@ -63,7 +50,6 @@ custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
-custom_styles/normal = SubResource( 3 )
 enabled_focus_mode = 0
 text = "Options"
 
@@ -96,17 +82,14 @@ custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
-custom_styles/hover = SubResource( 4 )
-custom_styles/pressed = SubResource( 5 )
-custom_styles/normal = SubResource( 6 )
 enabled_focus_mode = 0
 text = "Credits"
 
 [node name="Title" type="RichTextLabel" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -144.0
-margin_right = 130.0
+margin_left = -137.0
+margin_right = 137.0
 margin_bottom = 150.0
 theme = ExtResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
@@ -116,11 +99,6 @@ bbcode_text = "[center]Mongo's
 Game"
 text = "Mongo's
 Game"
-
-[node name="Title2" type="Sprite" parent="."]
-visible = false
-position = Vector2( 548, 100 )
-texture = ExtResource( 3 )
 
 [node name="CreditsPanel" type="Panel" parent="."]
 visible = false

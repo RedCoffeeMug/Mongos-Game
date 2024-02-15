@@ -82,8 +82,9 @@ func _on_TalkCostCheck_timeout():
 
 
 #Shop
-func _on_Travel_Button_pressed():
+func _on_ShopButton_pressed():
 	SceneTransition.change_scene("res://Scenes/Shop.tscn")
+
 
 
 #Day and night cycle 
@@ -115,3 +116,5 @@ func _on_EndGame_timeout(): #remove after beta
 
 func endgame(): #remove after beta
 	SceneTransition.change_scene("res://Scenes/BetaEnd.tscn")
+
+
