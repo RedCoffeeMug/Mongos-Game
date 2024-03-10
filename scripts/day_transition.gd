@@ -8,13 +8,15 @@ signal time_changed
 func _ready():
 	Day = true
 	$CorrectScene.start()
+	Daytimer.start()
+	Daytimer.paused = true
 
 
 func _on_CorrectScene_timeout():
-	if get_tree().current_scene.name == "House" and Daytimer.is_stopped() == true:
-		Daytimer.start()
+	if get_tree().current_scene.name == "House":
+		Daytimer.paused = false
 	elif get_tree().current_scene.name == "Menu":
-		Daytimer.stop()
+		Daytimer.paused = true
 
 
 func _on_DayTimer_timeout():
