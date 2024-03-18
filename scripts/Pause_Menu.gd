@@ -1,7 +1,6 @@
 extends Control
 
 
-
 func _ready():
 	visible = false
 
@@ -25,4 +24,20 @@ func _on_OptionsButton_pressed():
 func _on_MenuButton_pressed():
 	visible = false
 	SceneTransition.change_scene("res://Scenes/Menu.tscn")
+
+
+
+func _on_SaveButton_pressed():
+	var data = {
+		"Pats" : global.pats ,
+		"Coins" : global.coins ,
+		"Timeofday" : DayTransition.Day
+	}
+	
+	
+	var file = File.new()
+	var error = file.open(global.save_path, File.WRITE)
+	if error == OK:
+		file.store_var(data)
+		file.close()
 

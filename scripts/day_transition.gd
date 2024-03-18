@@ -6,7 +6,6 @@ signal time_changed
 
 
 func _ready():
-	Day = true
 	$CorrectScene.start()
 	Daytimer.start()
 	Daytimer.paused = true
