@@ -1,41 +1,60 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Themes/MainTheme.tres" type="Theme" id=1]
+[ext_resource path="res://scripts/Setting_Menu.gd" type="Script" id=2]
 
-[node name="Popup" type="Popup"]
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.823529, 0.705882, 0.54902, 1 )
+
+[node name="Settings_Menu" type="Control"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -421.5
-margin_top = -247.0
-margin_right = 421.5
-margin_bottom = 247.0
+margin_left = -357.5
+margin_top = -209.5
+margin_right = 357.5
+margin_bottom = 209.5
 theme = ExtResource( 1 )
+script = ExtResource( 2 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color( 0.858824, 0.737255, 0.415686, 1 )
-
-[node name="GridContainer" type="GridContainer" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -351.5
-margin_top = -206.0
-margin_right = 351.5
-margin_bottom = 206.0
-columns = 2
+margin_left = -357.5
+margin_top = -209.5
+margin_right = 357.5
+margin_bottom = 209.5
+color = Color( 0.72549, 0.6, 0.462745, 1 )
 
-[node name="MuteLabel" type="Label" parent="GridContainer"]
-margin_top = 6.0
-margin_right = 40.0
-margin_bottom = 25.0
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -119.0
+margin_top = -128.0
+margin_right = 119.0
+margin_bottom = 128.0
+
+[node name="MuteButton" type="Button" parent="VBoxContainer"]
+margin_right = 238.0
+margin_bottom = 19.0
+custom_styles/focus = SubResource( 1 )
 text = "Mute"
 
-[node name="CheckButton" type="CheckButton" parent="GridContainer"]
-margin_left = 44.0
-margin_right = 108.0
-margin_bottom = 32.0
+[node name="Exit" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -94.0
+margin_top = -20.0
+margin_right = -1.0
+margin_bottom = -1.0
+text = "Close"
+
+[connection signal="pressed" from="VBoxContainer/MuteButton" to="." method="_on_MuteButton_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]

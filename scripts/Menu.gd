@@ -10,8 +10,8 @@ func _ready():
 	copyright_text += "Made by [url=https://github.com/RedCoffeeMug]RedCoffeeMug[/url]\n"
 	copyright_text += "Created using the [url=https://godotengine.org/license/]Godot Game Engine[/url]\n"
 	copyright_text += "Using [url=https://fonts.google.com/specimen/Caprasimo/about]Caprasimo Regular Font[/url]\n\n"
-	copyright_text += "Special Thanks to: \nSmallMathGuy (Mongo haver). Maki.\n"
-	copyright_text += "Tigris (for their support)."
+	copyright_text += "Ideas: \nSmallMathGuy (Mongo haver) \n\n"
+	copyright_text += "Support and Feedback: \n Maki, Tigris"
 	
 	#license
 	var copyright_info = Engine.get_copyright_info()
@@ -36,6 +36,7 @@ func _ready():
 			
 			global.coins = player_data.Coins
 			global.pats = player_data.Pats
+			#global.is_muted = player_data.Muted
 			DayTransition.Day = player_data.Timeofday
 	
 	#put text in label
@@ -44,8 +45,10 @@ func _ready():
 	CreditsPanel.hide()
 
 func _process(delta):
-	if $BackgroundMusic.playing == false:
+	if $BackgroundMusic.playing == false and global.is_muted == false:
 		$BackgroundMusic.play()
+	elif global.is_muted == true:
+		$BackgroundMusic.stop()
 
 func _on_credits_label_meta_clicked(meta):
 	OS.shell_open(meta)
@@ -55,7 +58,7 @@ func _on_StartButton_pressed():
 	SceneTransition.change_scene("res://Scenes/House.tscn")
 
 func _on_OptionsButton_pressed():
-	pass
+	$Settings_Menu.show()
 
 func _on_QuitButton_pressed():
 	get_tree().quit()

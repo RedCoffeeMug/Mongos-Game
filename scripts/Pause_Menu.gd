@@ -17,10 +17,6 @@ func _on_ContinueButton_pressed():
 
 
 
-func _on_OptionsButton_pressed():
-	pass
-
-
 func _on_MenuButton_pressed():
 	visible = false
 	SceneTransition.change_scene("res://Scenes/Menu.tscn")
@@ -31,7 +27,8 @@ func _on_SaveButton_pressed():
 	var data = {
 		"Pats" : global.pats ,
 		"Coins" : global.coins ,
-		"Timeofday" : DayTransition.Day
+		"Timeofday" : DayTransition.Day ,
+		#"Muted" : global.is_muted
 	}
 	
 	

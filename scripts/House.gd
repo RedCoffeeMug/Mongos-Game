@@ -19,8 +19,10 @@ func _ready():
 	ReadyDayCheck()
 
 func _process(delta):
-	if $BackgroundMusic.playing == false:
+	if $BackgroundMusic.playing == false and global.is_muted == false:
 		$BackgroundMusic.play()
+	elif global.is_muted == true:
+		$BackgroundMusic.stop()
 
 
 #interacting with Mongo
@@ -37,7 +39,7 @@ func _on_TalkMongo_pressed():
 	else:
 		$InputArea.visible = false
 
-func _on_Input_text_entered(new_text):
+func _on_Input_text_entered(_new_text):
 	$MongoSpeaks.visible = true
 	Mongospeech.text = "*Mongo looks at you, he doesn't understand. However he smiles and wishes you joy for the rest of the day*"
 	$MongoSpeaks/Timer.start()

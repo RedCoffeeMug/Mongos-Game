@@ -258,7 +258,6 @@ anims/Night = SubResource( 8 )
 anims/RESET = SubResource( 9 )
 
 [node name="PauseMenu" parent="." instance=ExtResource( 5 )]
-visible = false
 
 [connection signal="pats_changed" from="Mongo" to="." method="_on_Mongo_pats_changed"]
 [connection signal="timeout" from="Mongo/PatsCooldown" to="Mongo" method="_on_PatsCooldown_timeout"]
