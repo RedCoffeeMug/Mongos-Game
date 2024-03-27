@@ -12,10 +12,11 @@ func _ready():
 
 
 func _on_CorrectScene_timeout():
-	if get_tree().current_scene.name == "House":
-		Daytimer.paused = false
-	elif get_tree().current_scene.name == "Menu":
-		Daytimer.paused = true
+	match get_tree().current_scene.name:
+		"House":
+			Daytimer.paused = false
+		"Menu":
+			Daytimer.paused = true
 
 
 func _on_DayTimer_timeout():

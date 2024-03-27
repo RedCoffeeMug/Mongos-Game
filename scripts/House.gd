@@ -15,10 +15,11 @@ func _ready():
 	$MongoSpeaks.visible = false
 	Talkmongo.disabled = true
 	Hugmongo.disabled = true
+# warning-ignore:return_value_discarded
 	DayTransition.connect("time_changed", self, "_on_time_changed")
 	ReadyDayCheck()
 
-func _process(delta):
+func _process(_delta):
 	if $BackgroundMusic.playing == false and global.is_muted == false:
 		$BackgroundMusic.play()
 	elif global.is_muted == true:

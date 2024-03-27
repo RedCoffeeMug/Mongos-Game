@@ -30,13 +30,14 @@ func _ready():
 	
 	CreditsPanel.hide()
 
-func _process(delta):
+func _process(_delta):
 	if $BackgroundMusic.playing == false and global.is_muted == false:
 		$BackgroundMusic.play()
 	elif global.is_muted == true:
 		$BackgroundMusic.stop()
 
 func _on_credits_label_meta_clicked(meta):
+# warning-ignore:return_value_discarded
 	OS.shell_open(meta)
 
 #Menu buttons
