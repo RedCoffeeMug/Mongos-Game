@@ -28,7 +28,7 @@ func _on_SaveButton_pressed():
 		"Pats" : global.pats ,
 		"Coins" : global.coins ,
 		"Timeofday" : DayTransition.Day ,
-		#"Muted" : global.is_muted
+		"Muted" : global.is_muted
 	}
 	
 	

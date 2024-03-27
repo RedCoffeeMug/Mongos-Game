@@ -19,6 +19,7 @@ config/icon="res://icon.png"
 global="*res://scripts/Global_Script.gd"
 SceneTransition="*res://Scenes/scene_transition.tscn"
 DayTransition="*res://Scenes/day_transition.tscn"
+AutoSave="*res://Scenes/Auto_Save.tscn"
 
 [display]
 
