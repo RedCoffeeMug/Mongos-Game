@@ -6,7 +6,7 @@
 script = ExtResource( 1 )
 
 [node name="CorrectScene" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 300.0
 
 [node name="DayTimer" type="Timer" parent="."]
 wait_time = 5.0

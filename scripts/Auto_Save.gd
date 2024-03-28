@@ -1,5 +1,7 @@
 extends Node
 
+const save_path = "user://globalvars.data"
+
 func _ready():
 	var data = {
 		"Pats" : global.pats ,
@@ -10,8 +12,8 @@ func _ready():
 	
 	
 	var file = File.new()
-	if file.file_exists(global.save_path):
-		var error = file.open(global.save_path, File.READ)
+	if file.file_exists(save_path):
+		var error = file.open(save_path, File.READ)
 		if error == OK:
 			var player_data = file.get_var()
 			file.close()

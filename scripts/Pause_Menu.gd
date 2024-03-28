@@ -33,7 +33,7 @@ func _on_SaveButton_pressed():
 	
 	
 	var file = File.new()
-	var error = file.open(global.save_path, File.WRITE)
+	var error = file.open(AutoSave.save_path, File.WRITE)
 	if error == OK:
 		file.store_var(data)
 		file.close()

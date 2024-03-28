@@ -95,17 +95,21 @@ func _on_ShopButton_pressed():
 #Day and night cycle 
 func ReadyDayCheck():
 	if DayTransition.Day == true:
+		global.can_pat = true
 		Housebackground.texture = load("res://assets/House-day.png")
 	else:
+		global.can_pat = false
 		Housebackground.texture = load("res://assets/House-night.png")
 
 func _on_time_changed():
 	if DayTransition.Day == true:
+		global.can_pat = true
 		$DayTransition/AnimationPlayer.play("Day")
 		yield($DayTransition/AnimationPlayer, 'animation_finished')
 		Housebackground.texture = load("res://assets/House-day.png")
 		$DayTransition/AnimationPlayer.play_backwards("Day")
 	else:
+		global.can_pat = false
 		$DayTransition/AnimationPlayer.play("Night")
 		yield($DayTransition/AnimationPlayer, 'animation_finished')
 		Housebackground.texture = load("res://assets/House-night.png")
